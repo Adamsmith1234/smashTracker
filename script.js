@@ -47,48 +47,35 @@ function loadSelections(){
 
 }
 
-async function submitMatch(winner,stocks){
+function submitMatch(winner, stocks) {
 
-    document.querySelectorAll("button").forEach(b=>b.disabled=true);
-
-    const payload={
-
-        timestamp:new Date().toLocaleString(),
-
-        adamChar:document.getElementById("adamChar").value,
-
-        justinChar:document.getElementById("justinChar").value,
-
-        stocksWonBy:stocks,
-
-        winner:winner
-
+    const payload = {
+        timestamp: new Date().toLocaleString(),
+        adamChar: document.getElementById("adamChar").value,
+        justinChar: document.getElementById("justinChar").value,
+        stocksWonBy: stocks,
+        winner: winner
     };
 
-    try{
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = WEB_APP_URL;
+    form.target = "hidden_iframe";
 
-        await fetch(WEB_APP_URL, {
-            method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify(payload)
-        });
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "data";
+    input.value = JSON.stringify(payload);
 
-        document.getElementById("status").textContent="✓ Logged";
+    form.appendChild(input);
+    document.body.appendChild(form);
 
-        setTimeout(()=>{
+    form.submit();
 
-            document.getElementById("status").textContent="";
+    document.getElementById("status").textContent = "✓ Logged";
 
-        },1200);
-
-    }
-
-    catch{
-
-        document.getElementById("status").textContent="❌ Upload Failed";
-
-    }
-
-    document.querySelectorAll("button").forEach(b=>b.disabled=false);
-
+    setTimeout(() => {
+        document.getElementById("status").textContent = "";
+        form.remove();
+    }, 1000);
 }
