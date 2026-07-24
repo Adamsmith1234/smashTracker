@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Smash Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="characters.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<h1>Smash Tracker</h1>
+
+<div class="container">
+
+    <div class="player">
+
+        <h2>Adam</h2>
+
+        <select id="adamChar"></select>
+
+        <button class="stock green" onclick="submitMatch('Adam',3)">3</button>
+        <button class="stock yellow" onclick="submitMatch('Adam',2)">2</button>
+        <button class="stock red" onclick="submitMatch('Adam',1)">1</button>
+
+    </div>
+
+    <div class="player">
+
+        <h2>Justin</h2>
+
+        <select id="justinChar"></select>
+
+        <button class="stock green" onclick="submitMatch('Justin',3)">3</button>
+        <button class="stock yellow" onclick="submitMatch('Justin',2)">2</button>
+        <button class="stock red" onclick="submitMatch('Justin',1)">1</button>
+
+    </div>
+
+</div>
+
+<div id="status"></div>
+
+</body>
+</html>

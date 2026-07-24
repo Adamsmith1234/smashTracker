@@ -1,0 +1,89 @@
+body{
+
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+
+    background:#111;
+    color:white;
+
+    text-align:center;
+}
+
+h1{
+
+    margin:20px;
+}
+
+.container{
+
+    display:flex;
+    justify-content:space-evenly;
+    gap:20px;
+
+    padding:20px;
+}
+
+.player{
+
+    width:45%;
+}
+
+select{
+
+    width:100%;
+    padding:12px;
+
+    font-size:20px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+}
+
+.stock{
+
+    width:100%;
+    height:80px;
+
+    margin:10px 0;
+
+    border:none;
+
+    border-radius:20px;
+
+    font-size:36px;
+    font-weight:bold;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.green{
+
+    background:#28a745;
+}
+
+.yellow{
+
+    background:#f0ad4e;
+}
+
+.red{
+
+    background:#dc3545;
+}
+
+.stock:active{
+
+    transform:scale(.97);
+}
+
+#status{
+
+    font-size:22px;
+
+    margin:30px;
+
+    color:#55ff55;
+}
