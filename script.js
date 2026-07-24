@@ -67,12 +67,10 @@ async function submitMatch(winner,stocks){
 
     try{
 
-        await fetch(WEB_APP_URL,{
-
-            method:"POST",
-
-            body:JSON.stringify(payload)
-
+        await fetch(WEB_APP_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(payload)
         });
 
         document.getElementById("status").textContent="✓ Logged";
