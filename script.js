@@ -1,4 +1,4 @@
-const WEB_APP_URL = "YOUR_WEB_APP_URL";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwytzx24Njel13hSOw7qrEQBDRZL-QBI0hlcA7SDJkXzwElSMAMKx13qZrhm8Q1OCTtow/exec";
 
 window.onload = () => {
 
