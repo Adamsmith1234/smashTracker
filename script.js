@@ -1,5 +1,7 @@
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwytzx24Njel13hSOw7qrEQBDRZL-QBI0hlcA7SDJkXzwElSMAMKx13qZrhm8Q1OCTtow/exec";
 
+console.log("Script loaded");
+
 window.onload = () => {
 
     populate("adamChar");
