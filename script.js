@@ -49,33 +49,34 @@ function loadSelections(){
 
 function submitMatch(winner, stocks) {
 
-    const payload = {
-        timestamp: new Date().toLocaleString(),
-        adamChar: document.getElementById("adamChar").value,
-        justinChar: document.getElementById("justinChar").value,
-        stocksWonBy: stocks,
-        winner: winner
-    };
-
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = WEB_APP_URL;
+    form.action = "https://docs.google.com/forms/d/e/1FAIpQLSfRI5Wxk5JSJkgb3LSNR_YsW_5SR9ktL7uFsbv74-FgrExfcw/formResponse";
     form.target = "hidden_iframe";
 
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = "data";
-    input.value = JSON.stringify(payload);
+    const fields = {
+        "entry.1339757873": new Date().toLocaleString(),
+        "entry.1925487194": document.getElementById("adamChar").value,
+        "entry.1218706185": document.getElementById("justinChar").value,
+        "entry.308357173": stocks,
+        "entry.1698128890": winner
+    };
 
-    form.appendChild(input);
+    for (const key in fields) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = fields[key];
+        form.appendChild(input);
+    }
+
     document.body.appendChild(form);
-
     form.submit();
+    form.remove();
 
     document.getElementById("status").textContent = "✓ Logged";
 
     setTimeout(() => {
         document.getElementById("status").textContent = "";
-        form.remove();
     }, 1000);
 }
