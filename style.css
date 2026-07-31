@@ -1,17 +1,67 @@
 body{
 
     margin:0;
+    min-height:100vh;
     font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-
-    background:#111;
-    color:white;
-
+    background:radial-gradient(circle at top, #1b2a4a 0%, #101827 40%, #0b1020 100%);
+    color:#edf2ff;
     text-align:center;
+    padding:32px 16px 48px;
+    box-sizing:border-box;
+}
+
+.app-shell{
+    width:min(100%, 900px);
+    margin:0 auto;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.navButton,
+button{
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg, #4f8cff, #2d6cdf);
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 6px 18px rgba(59, 130, 246, 0.25);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 28px;
+    line-height: 1;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.navButton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:52px;
+    height:52px;
+    padding:0;
+    font-size:16px;
+}
+
+.navButton:hover,
+button:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 24px rgba(59, 130, 246, 0.35);
 }
 
 h1{
 
-    margin:20px;
+    margin:20px 0 30px;
+    font-size:2.2rem;
 }
 
 .container{
@@ -19,59 +69,61 @@ h1{
     display:flex;
     justify-content:space-evenly;
     gap:20px;
-
-    padding:20px;
+    padding:24px;
+    background:rgba(17, 24, 39, 0.82);
+    border:1px solid rgba(148, 163, 184, 0.15);
+    border-radius:20px;
+    box-shadow:0 18px 40px rgba(15, 23, 42, 0.5);
 }
 
 .player{
 
     width:45%;
+    background:rgba(30, 41, 59, 0.8);
+    border-radius:16px;
+    padding:20px 18px;
+    border:1px solid rgba(148, 163, 184, 0.18);
 }
 
 select{
 
     width:100%;
     padding:12px;
-
     font-size:20px;
-
     border-radius:12px;
-
     margin-bottom:20px;
+    border:1px solid rgba(148, 163, 184, 0.3);
+    background:#0f172a;
+    color:#edf2ff;
+    box-sizing:border-box;
 }
 
 .stock{
 
     width:100%;
     height:80px;
-
     margin:10px 0;
-
     border:none;
-
-    border-radius:20px;
-
+    border-radius:18px;
     font-size:36px;
     font-weight:bold;
-
     color:white;
-
     cursor:pointer;
 }
 
 .green{
 
-    background:#28a745;
+    background:linear-gradient(135deg, #22c55e, #16a34a);
 }
 
 .yellow{
 
-    background:#f0ad4e;
+    background:linear-gradient(135deg, #fbbf24, #f59e0b);
 }
 
 .red{
 
-    background:#dc3545;
+    background:linear-gradient(135deg, #ef4444, #dc2626);
 }
 
 .stock:active{
@@ -82,8 +134,7 @@ select{
 #status{
 
     font-size:22px;
-
-    margin:30px;
-
-    color:#55ff55;
+    margin:30px 0 0;
+    color:#7ef0a5;
+    min-height:30px;
 }

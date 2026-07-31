@@ -6,6 +6,9 @@
     <title>Smash Tracker</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="characters.js"></script>
     <script src="script.js" defer></script>
@@ -13,9 +16,20 @@
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 <body>
 
-<h1>Smash Tracker</h1>
+<div class="app-shell">
 
-<div class="container">
+    <div class="nav">
+        <button class="navButton" aria-label="Home" onclick="location.href='index.html'">
+            <span class="material-symbols-outlined">home</span>
+        </button>
+        <button class="navButton" aria-label="Stats" onclick="location.href='stats.html'">
+            <span class="material-symbols-outlined">bar_chart</span>
+        </button>
+    </div>
+
+    <h1>Smash Tracker</h1>
+
+    <div class="container">
 
     <div class="player">
 
@@ -44,6 +58,8 @@
 </div>
 
 <div id="status"></div>
+
+</div>
 
 </body>
 </html>

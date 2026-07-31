@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smash Tracker Stats</title>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="stats.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stats.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <div class="nav">
+        <button class="navButton" aria-label="Home" onclick="location.href='index.html'">
+            <span class="material-symbols-outlined">home</span>
+        </button>
+        <button class="navButton" aria-label="Stats" onclick="location.href='stats.html'">
+            <span class="material-symbols-outlined">bar_chart</span>
+        </button>
+    </div>
+
+    <h1>Stats</h1>
+
+    <div class="card">
+        <h2>Overall Record</h2>
+
+    <div id="overall"></div>
+</div>
+
+<div class="card">
+    <h2>Current Streak</h2>
+
+    <div id="streak"></div>
+</div>
+
+<div class="card">
+    <h2>Most Played</h2>
+
+    <div id="mains"></div>
+</div>
+
+<div class="card">
+    <h2>Character Records</h2>
+
+    <div id="characterRecords"></div>
+</div>
+
+    <div class="card">
+        <h2>Last 10 Matches</h2>
+
+        <div id="recent"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
